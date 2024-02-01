@@ -1,14 +1,22 @@
+// required files
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { Circle, Square, Triangle } = require('./Lib/shapes.js')
 
-
+// prompt questions
 inquirer
     .prompt([
         {
             type: "input",
             name: "text",
-            message: "Enter up to 3 characters:"
+            message: "Enter up to 3 characters:",
+            validate: function(input){
+                if(input.length > 3){
+                    return "Logo can only have 3 characters."
+            } else {
+                return true;
+            }
+            },
         },
 
         {
@@ -35,6 +43,7 @@ inquirer
         },
     ])
 
+    // adds values to each shape
     .then((res) => {
         if (res.shape === 'Circle') {
             const circle = new Circle(res.text, res.color, res.textColor)
