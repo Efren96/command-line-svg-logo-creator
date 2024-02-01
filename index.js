@@ -19,7 +19,7 @@ inquirer
 
         {
             type: "input",
-            name: "shapeColor",
+            name: "color",
             message: "Enter a color or a hexadecimal number for the shape:"
         },
 
@@ -37,21 +37,21 @@ inquirer
 
     .then((res) => {
         if (res.shape === 'Circle') {
-            const circle = new Circle(res.text, res.shapeColor, res.textColor)
+            const circle = new Circle(res.text, res.color, res.textColor)
             fs.writeFile('./Examples/logo.svg', circle.render(), (error) => {
                 if (error) {
                     console.log(error);
                 }
             })
         } else if (res.shape === 'Square') {
-            const square = new Square(res.text, res.shapeColor, res.textColor)
+            const square = new Square(res.text, res.color, res.textColor)
             fs.writeFile('./Examples/logo.svg', square.render(), (error) => {
                 if (error) {
                     console.log(error);
                 }
             })
         } else {
-            const triangle = new Triangle(res.text, res.shapeColor, res.textColor)
+            const triangle = new Triangle(res.text, res.color, res.textColor)
             fs.writeFile('./Examples/logo.svg', triangle.render(), (error) => {
                 if (error) {
                     console.log(error);
