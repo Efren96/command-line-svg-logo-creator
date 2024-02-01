@@ -5,7 +5,7 @@
   This week we had to make a command line application that allows users to enter inputs into an inquirer prompt to generate a logo or SVG file and also test our application using jest.
 
   ## Demo 
-  https://app.screencastify.com/v3/watch/6JYNl1I9jU1zpmMLBU1q
+ https://watch.screencastify.com/v/D1RN7bVt5Kah8sxapgYR
 
 
   ## Table of Contents
